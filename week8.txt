@@ -1,0 +1,33 @@
+สรุป week 8
+การใช้ git
+1. ติดตั้ง git
+2. สร้าง directory ที่จะเก็บงาน โดยใช้ mkdir (ตามด้วยชื่อไฟล์)  ใช้ cd เพื่อเปลี่ยน working directory
+3.Initial git respository โดยใช้ git init สังเกตว่ามี directory ชื่อ .git ไหมด้วย
+4.ตรวจสอบสถานะไฟล์ใช้ git status
+5.เพิ่มไฟล์เข้า staging area เพื่อรอ commit ใช้ git add ชื่อไฟล์
+6.ตั้งค่าชื่อและอีเมลเพื่อระบุตัวผู้ commit
+	git config user.name "Your Name"
+	git config user.email "yourmail@ku.th"
+
+    ถ้าเป็นเครื่องส่วนตัว ให้ใส่ option --global (global) ด้วย
+	git config --global user.name "Your Name"
+	git config --global user.email "yourmail@ku.th"
+7.Commit ไฟล์ เพื่อเก็บ Version/Snapshot/Checkpoint (แล้วแต่จะเรียก) ของไฟล์
+	git commit -m "ชื่อที่เราต้องการ"
+8.ดู checkpoint ทั้งหมดด้วย git log adog
+	git log --all --decorate --oneline --grpah
+9.สร้าง account 
+10.สร้าง repository บน github
+11.เชื่อม local repository (git repo ในเครื่องเรา) กับ github ด้วยคำสั่ง 
+git remote add <ชื่อ remote เช่น origin> <git url>\
+12. เมื่อเชื่อม local ในเครื่อง กับ remote ที่ github ได้แล้ว ให้ส่งไฟล์และประวัติไปเก็บที่ github ด้วยคำสั่ง git push
+	git push -u origin master
+13.ตรวจสอบว่ามีไฟล์ใน github ครบไหม
+
+ประโยชน์อย่างหนึ่งของการใช้ git คือ สามารถนำ Checkpoint เก่ากลับมาทำงานได้ โดยทำได้ 2 แบบคือ
+
+กลับมาทั้งหมด
+	git checkout <commit-id>
+
+กลับมาบางไฟล์
+	git checkout <commit-id>  <ชื่อไฟล์>
