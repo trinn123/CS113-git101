@@ -1,0 +1,25 @@
+การสร้าง/แยก Branch
+
+1.คำสั่งในการสร้าง Branch
+	git branch <branch name>
+เช่น git branch <All>
+2.ตรวจสอบว่ามี Branch ไรบ้าง
+	git branch
+
+3. เปลี่ยน Branch โดย
+	 git checkout ชื่อ Branch
+
+การ merge
+
+ต้องการให้ Branch ใหม่ merge กับ master ทำได้โดย
+	git merge <ชื่อ branch>
+
+เมื่อไม่มี conflict จะทำให้ git สร้าง commit ของการ merge นั้นไปเลย 
+ดังนั้น เราจะต้องใส่ commit message ด้วย vi ถ้าใช้ default merge commit message ให้กด ESC แล้วพิมพ์ :wq! แล้วกด Enter
+
+การ Pull แบบไม่มี Conflict
+ใช้คำสั่ง
+-  git pull origin master
+
+ถ้าเกิด Conflict
+ก็ต้องเลือกว่าจะเอาอันไหนเป็นหลักหรือเอาทั้งคู่
